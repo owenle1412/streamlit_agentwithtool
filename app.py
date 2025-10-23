@@ -77,7 +77,7 @@ def call_tool(state: AgentState):
         if tool_name == "tavily_search":
             query = tool_call['args']['query']
             # Run the search
-            tool_response = tavily_search(query)
+            tool_response = tavily_search.run(query)
             
             # Create a ToolMessage with the result and add it to the state
             return {"messages": [ToolMessage(content=tool_response, tool_call_id=tool_call['id'])]}
