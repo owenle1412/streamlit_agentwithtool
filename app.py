@@ -10,7 +10,6 @@ from langchain_core.messages import (
     ToolMessage,
     AIMessage,
 )
-from langchain_core.utils.function_calling import format_tool_to_openai_function
 from langgraph.graph import StateGraph, END
 from langgraph.graph.message import add_messages
 
